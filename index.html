@@ -11,20 +11,23 @@
 
 <style>
 
+/* GLOBAL */
 html{
     scroll-behavior:smooth;
 }
 
 body{
     font-family:'Segoe UI',sans-serif;
+    background: linear-gradient(135deg, #e0e7ff, #fdf2ff);
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar{
-    box-shadow:0 2px 15px rgba(0,0,0,0.15);
+    background: linear-gradient(135deg, #4f46e5, #9333ea) !important;
+    box-shadow:0 4px 20px rgba(0,0,0,0.2);
 }
 
-/* Hero Section */
+/* HERO */
 .hero{
     min-height:100vh;
     display:flex;
@@ -33,13 +36,7 @@ body{
     text-align:center;
     color:white;
     position:relative;
-
-    background:linear-gradient(
-    135deg,
-    #2c2c2c,
-    #4a4a4a,
-    #6b6b6b
-    );
+    background: linear-gradient(135deg, #4f46e5, #9333ea, #6366f1);
 }
 
 .hero::before{
@@ -49,7 +46,7 @@ body{
     left:0;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,0.2);
+    background:rgba(0,0,0,0.15);
 }
 
 .hero .container{
@@ -59,11 +56,12 @@ body{
 
 .hero h1{
     font-size:4rem;
-    font-weight:700;
+    font-weight:800;
 }
 
 .hero p{
     font-size:1.3rem;
+    opacity:0.9;
 }
 
 .hero-btn{
@@ -71,15 +69,16 @@ body{
     border-radius:30px;
 }
 
-/* Sections */
+/* SECTIONS */
 section{
     padding:100px 0;
 }
 
 .section-title{
     text-align:center;
-    font-weight:bold;
+    font-weight:800;
     margin-bottom:60px;
+    color:#1f1f1f;
 }
 
 .section-title::after{
@@ -87,67 +86,57 @@ section{
     display:block;
     width:70px;
     height:4px;
-    background:#0d6efd;
+    background:linear-gradient(135deg,#4f46e5,#9333ea);
     margin:15px auto;
     border-radius:5px;
 }
 
-/* About Image */
-.profile-img{
-    width:100%;
-    max-width:350px;
-    border-radius:15px;
-}
-/* About Section */
+/* ABOUT */
 #about{
-    background:#f5f5f5;
+    background:#f8f7ff;
 }
 
 .about-box{
     background:white;
     padding:40px;
     border-radius:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
 }
 
-.about-box h3{
-    color:#2c2c2c;
-    font-weight:700;
+.profile-img{
+    width:100%;
+    max-width:350px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
-.about-box p{
-    color:#555;
-    line-height:1.8;
+/* PROJECT CARDS */
+#projects{
+    background: linear-gradient(135deg, #f3f4ff, #ffffff);
 }
-/* Project Cards */
+
 .project-card{
-    background:linear-gradient(135deg,#2c2c2c,#4a4a4a);
+    background: linear-gradient(135deg,#4f46e5,#9333ea);
     color:white;
     border:none;
     border-radius:20px;
     overflow:hidden;
     transition:all .4s ease;
-    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
 }
 
 .project-card:hover{
     transform:translateY(-12px);
-    box-shadow:0 15px 35px rgba(0,0,0,0.25);
-}
-
-.project-card .card-title{
-    font-size:1.4rem;
-    font-weight:700;
-    margin-bottom:15px;
+    box-shadow:0 18px 40px rgba(0,0,0,0.25);
 }
 
 .project-card p{
-    color:#dcdcdc;
+    color:#e5e7eb;
 }
 
 .project-btn{
     background:white;
-    color:#2c2c2c;
+    color:#4f46e5;
     border:none;
     border-radius:30px;
     padding:10px 25px;
@@ -155,13 +144,10 @@ section{
 }
 
 .project-btn:hover{
-    background:#e0e0e0;
-    color:black;
+    background:#e0e7ff;
 }
-#projects{
-    background:#ececec;
-}
-/* Contact */
+
+/* CONTACT */
 .contact-icon{
     font-size:2rem;
     margin:0 10px;
@@ -172,9 +158,9 @@ section{
     transform:scale(1.2);
 }
 
-/* Footer */
+/* FOOTER */
 footer{
-    background:#212529;
+    background: linear-gradient(135deg,#4f46e5,#9333ea);
     color:white;
     text-align:center;
     padding:25px 0;
@@ -182,58 +168,35 @@ footer{
 
 </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 <div class="container">
 
-<a class="navbar-brand fw-bold" href="#">
-Shifana
-</a>
+<a class="navbar-brand fw-bold" href="#">Shifana</a>
 
-<button class="navbar-toggler"
-type="button"
-data-bs-toggle="collapse"
-data-bs-target="#navbarNav">
-
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
 <span class="navbar-toggler-icon"></span>
-
 </button>
 
-<div class="collapse navbar-collapse"
-id="navbarNav">
-
+<div class="collapse navbar-collapse" id="navbarNav">
 <ul class="navbar-nav ms-auto">
 
-<li class="nav-item">
-<a class="nav-link" href="#home">Home</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#about">About</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#projects">Projects</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#contact">Contact</a>
-</li>
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 
 </ul>
-
 </div>
 
 </div>
-
 </nav>
 
-<!-- Hero Section -->
+<!-- HERO -->
 <section id="home" class="hero">
-
 <div class="container">
 
 <h1>Hello, I'm Shifana Sajeev</h1>
@@ -242,23 +205,14 @@ id="navbarNav">
 Full Stack Developer | PHP Developer | Web Designer
 </p>
 
-<a href="#projects"
-class="btn btn-primary hero-btn me-2">
-View Projects
-</a>
-
-<a href="#contact"
-class="btn btn-outline-light hero-btn">
-Contact Me
-</a>
+<a href="#projects" class="btn btn-light hero-btn me-2">View Projects</a>
+<a href="#contact" class="btn btn-outline-light hero-btn">Contact Me</a>
 
 </div>
-
 </section>
 
-<!-- About Section -->
+<!-- ABOUT -->
 <section id="about">
-
 <div class="container">
 
 <h2 class="section-title">About Me</h2>
@@ -266,44 +220,29 @@ Contact Me
 <div class="row align-items-center">
 
 <div class="col-md-5 text-center mb-4">
-
 <img src="https://i.pinimg.com/videos/thumbnails/originals/b6/36/20/b63620addcf4f60d146d9a0e2663963d.0000000.jpg"
-alt="Profile"
-class="img-fluid shadow profile-img">
-
+class="img-fluid profile-img">
 </div>
 
-<div class="col-md-7">
+<div class="col-md-7 about-box">
 
 <h3>Who Am I?</h3>
 
-<p>
-I am a passionate Full Stack Developer with experience in
-building responsive web applications using HTML, CSS,
-Bootstrap, JavaScript, PHP and MySQL.
-</p>
+<p>I am a passionate Full Stack Developer with experience in HTML, CSS, Bootstrap, JavaScript, PHP and MySQL.</p>
 
-<p>
-I enjoy creating user-friendly websites, management systems,
-and innovative digital solutions that help businesses and
-individuals succeed online.
-</p>
+<p>I build responsive websites, management systems and modern UI designs.</p>
 
-<p>
-My interests include web development, UI/UX design,
-database management, and modern web technologies.
-</p>
+<p>I love creating clean and user-friendly web experiences.</p>
 
 </div>
 
 </div>
 
 </div>
-
 </section>
 
-<!-- Projects -->
-<section id="projects" class="bg-light">
+<!-- PROJECTS -->
+<section id="projects">
 
 <div class="container">
 
@@ -312,103 +251,61 @@ database management, and modern web technologies.
 <div class="row g-4">
 
 <div class="col-md-4">
-
-<div class="card project-card shadow h-100">
-
+<div class="card project-card h-100">
 <div class="card-body">
-
-<h5 class="card-title">
-Online Voting System
-</h5>
-
-<p>
-Secure voting application developed using
-PHP and MySQL.
-</p>
-
-<button class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#votingModal">
-    View Project
+<h5 class="card-title">Online Voting System</h5>
+<p>Secure voting application using PHP & MySQL.</p>
+<button class="btn project-btn"
+data-bs-toggle="modal"
+data-bs-target="#votingModal">
+View Project
 </button>
-
-</a>
-
 </div>
-
 </div>
-
 </div>
 
 <div class="col-md-4">
-
-<div class="card project-card shadow h-100">
-
+<div class="card project-card h-100">
 <div class="card-body">
-
-<h5 class="card-title">
-Library Management System
-</h5>
-
-<p>
-Book management and issue tracking system.
-</p>
-
-<button class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#libraryModal">
-    View Project
+<h5 class="card-title">Library Management System</h5>
+<p>Book management and issue tracking system.</p>
+<button class="btn project-btn"
+data-bs-toggle="modal"
+data-bs-target="#libraryModal">
+View Project
 </button>
-
 </div>
-
 </div>
-
 </div>
 
 <div class="col-md-4">
-
-<div class="card project-card shadow h-100">
-
+<div class="card project-card h-100">
 <div class="card-body">
-
-<h5 class="card-title">
-E-Commerce Website
-</h5>
-
-<p>
-Responsive online shopping platform with
-cart functionality.
-</p>
-
-<button class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#ecommerceModal">
-    View Project
+<h5 class="card-title">E-Commerce Website</h5>
+<p>Shopping platform with cart functionality.</p>
+<button class="btn project-btn"
+data-bs-toggle="modal"
+data-bs-target="#ecommerceModal">
+View Project
 </button>
-
+</div>
+</div>
 </div>
 
 </div>
 
-</div>
-
-</div>
-
-</div>
-
-</div>
+<!-- MORE BUTTON -->
 <div class="text-center mt-5">
-    <a href="projects.html" class="btn btn-dark btn-lg">
-        <i class="bi bi-folder-fill"></i> More Projects
-    </a>
+<a href="projects.html" class="btn btn-dark btn-lg">
+<i class="bi bi-folder-fill"></i> More Projects
+</a>
 </div>
 
+</div>
 </section>
 
-<!-- Contact -->
+<!-- CONTACT -->
 <section id="contact">
-
 <div class="container">
 
 <h2 class="section-title">Contact Me</h2>
@@ -420,46 +317,26 @@ cart functionality.
 <form>
 
 <div class="mb-3">
-<input type="text"
-class="form-control"
-placeholder="Your Name">
+<input class="form-control" placeholder="Your Name">
 </div>
 
 <div class="mb-3">
-<input type="email"
-class="form-control"
-placeholder="Your Email">
+<input class="form-control" placeholder="Your Email">
 </div>
 
 <div class="mb-3">
-<textarea class="form-control"
-rows="5"
-placeholder="Your Message"></textarea>
+<textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
 </div>
 
-<button type="submit"
-class="btn btn-primary">
-Send Message
-</button>
+<button class="btn btn-primary">Send Message</button>
 
 </form>
 
 <div class="text-center mt-5">
 
-<a href="#"
-class="text-dark contact-icon">
-<i class="bi bi-github"></i>
-</a>
-
-<a href="#"
-class="text-primary contact-icon">
-<i class="bi bi-linkedin"></i>
-</a>
-
-<a href="#"
-class="text-danger contact-icon">
-<i class="bi bi-envelope-fill"></i>
-</a>
+<a href="#" class="text-dark contact-icon"><i class="bi bi-github"></i></a>
+<a href="#" class="text-primary contact-icon"><i class="bi bi-linkedin"></i></a>
+<a href="#" class="text-danger contact-icon"><i class="bi bi-envelope-fill"></i></a>
 
 </div>
 
@@ -468,218 +345,17 @@ class="text-danger contact-icon">
 </div>
 
 </div>
-
 </section>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer>
-
 <div class="container">
-
-<p>
-shifanasajeev13.github.io
-</p>
-
-<p>
-© 2026 Shifana Sajeev| All Rights Reserved.
-</p>
-
-
-
+<p>shifanasajeev13.github.io</p>
+<p>© 2026 Shifana Sajeev | All Rights Reserved.</p>
 </div>
-
 </footer>
-
-<!-- More Projects Modal -->
-<div class="modal fade" id="moreProjectsModal" tabindex="-1">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-
-      <div class="modal-header bg-dark text-white">
-        <h5 class="modal-title">My Additional Projects</h5>
-        <button type="button"
-                class="btn-close btn-close-white"
-                data-bs-dismiss="modal"></button>
-      </div>
-
-      <div class="modal-body">
-
-        <div class="row g-3">
-
-          <div class="col-md-6">
-            <div class="card shadow-sm">
-              <div class="card-body">
-                <h5>Student Management System</h5>
-                <p>Manage student records, attendance and reports.</p>
-                <a href="https://github.com/"
-                   target="_blank"
-                   class="btn btn-primary">
-                   View Project
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="card shadow-sm">
-              <div class="card-body">
-                <h5>Portfolio Website</h5>
-                <p>Responsive personal portfolio using Bootstrap.</p>
-                <a href="https://github.com/"
-                   target="_blank"
-                   class="btn btn-primary">
-                   View Project
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="card shadow-sm">
-              <div class="card-body">
-                <h5>Employee Management System</h5>
-                <p>Manage employee details and payroll records.</p>
-                <a href="https://github.com/"
-                   target="_blank"
-                   class="btn btn-primary">
-                   View Project
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="card shadow-sm">
-              <div class="card-body">
-                <h5>Hotel Booking Website</h5>
-                <p>Online room booking and reservation platform.</p>
-                <a href="https://github.com/"
-                   target="_blank"
-                   class="btn btn-primary">
-                   View Project
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-</div>
-<!-- Voting Modal -->
-<div class="modal fade" id="votingModal" tabindex="-1">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <h5 class="modal-title">Online Voting System</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <div class="modal-body">
-
-        <img src="https://t3.ftcdn.net/jpg/03/89/61/88/360_F_389618887_PImTbyGB4vTQOoGKxjhOKp2w7hZmcNAs.jpg" style=height:500px
-             class="img-fluid rounded mb-3"
-             alt="Voting System">
-
-        <p>
-          A secure online voting application developed using
-          PHP, MySQL, Bootstrap and JavaScript.
-        </p>
-
-        <h6>Features</h6>
-        <ul>
-          <li>Admin Dashboard</li>
-          <li>Voter Login</li>
-          <li>Candidate Management</li>
-          <li>Vote Casting</li>
-          <li>Result Generation</li>
-        </ul>
-
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- Library Modal -->
-<div class="modal fade" id="libraryModal" tabindex="-1">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <h5 class="modal-title">Library Management System</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <div class="modal-body">
-
-        <img src="https://4.imimg.com/data4/DB/QV/MY-29214035/library-management-system-500x500.jpg" style=height:500px
-             class="img-fluid rounded mb-3"
-             alt="Library Management">
-
-        <p>
-          Library management application for managing books,
-          students and issue records.
-        </p>
-
-        <h6>Features</h6>
-        <ul>
-          <li>Book Management</li>
-          <li>Student Management</li>
-          <li>Issue & Return Books</li>
-          <li>Search Books</li>
-        </ul>
-
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- Ecommerce Modal -->
-<div class="modal fade" id="ecommerceModal" tabindex="-1">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <h5 class="modal-title">E-Commerce Website</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <div class="modal-body">
-
-        <img src="https://img.magnific.com/free-photo/showing-cart-trolley-shopping-online-sign-graphic_53876-133967.jpg" style=height:500px
-             class="img-fluid rounded mb-3"
-             alt="Ecommerce Website">
-
-        <p>
-          Responsive online shopping website with product
-          listing and shopping cart functionality.
-        </p>
-
-        <h6>Features</h6>
-        <ul>
-          <li>Product Listing</li>
-          <li>Shopping Cart</li>
-          <li>User Login</li>
-          <li>Order Management</li>
-        </ul>
-
-      </div>
-
-    </div>
-  </div>
-</div> 
-
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
-
