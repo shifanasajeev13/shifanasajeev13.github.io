@@ -33,8 +33,13 @@ body{
     text-align:center;
     color:white;
     position:relative;
-    background:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80')
-    center center/cover no-repeat;
+
+    background:linear-gradient(
+    135deg,
+    #2c2c2c,
+    #4a4a4a,
+    #6b6b6b
+    );
 }
 
 .hero::before{
@@ -44,7 +49,7 @@ body{
     left:0;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,0.65);
+    background:rgba(0,0,0,0.2);
 }
 
 .hero .container{
@@ -93,19 +98,69 @@ section{
     max-width:350px;
     border-radius:15px;
 }
+/* About Section */
+#about{
+    background:#f5f5f5;
+}
 
+.about-box{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.about-box h3{
+    color:#2c2c2c;
+    font-weight:700;
+}
+
+.about-box p{
+    color:#555;
+    line-height:1.8;
+}
 /* Project Cards */
 .project-card{
+    background:linear-gradient(135deg,#2c2c2c,#4a4a4a);
+    color:white;
     border:none;
-    border-radius:15px;
-    transition:0.3s;
+    border-radius:20px;
+    overflow:hidden;
+    transition:all .4s ease;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
 }
 
 .project-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    transform:translateY(-12px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
 }
 
+.project-card .card-title{
+    font-size:1.4rem;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.project-card p{
+    color:#dcdcdc;
+}
+
+.project-btn{
+    background:white;
+    color:#2c2c2c;
+    border:none;
+    border-radius:30px;
+    padding:10px 25px;
+    font-weight:600;
+}
+
+.project-btn:hover{
+    background:#e0e0e0;
+    color:black;
+}
+#projects{
+    background:#ececec;
+}
 /* Contact */
 .contact-icon{
     font-size:2rem;
@@ -271,8 +326,12 @@ Secure voting application developed using
 PHP and MySQL.
 </p>
 
-<a href="#" class="btn btn-primary">
-View Project
+<button class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#votingModal">
+    View Project
+</button>
+
 </a>
 
 </div>
@@ -295,9 +354,11 @@ Library Management System
 Book management and issue tracking system.
 </p>
 
-<a href="#" class="btn btn-primary">
-View Project
-</a>
+<button class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#libraryModal">
+    View Project
+</button>
 
 </div>
 
@@ -320,9 +381,11 @@ Responsive online shopping platform with
 cart functionality.
 </p>
 
-<a href="#" class="btn btn-primary">
-View Project
-</a>
+<button class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#ecommerceModal">
+    View Project
+</button>
 
 </div>
 
@@ -332,6 +395,13 @@ View Project
 
 </div>
 
+</div>
+
+</div>
+<div class="text-center mt-5">
+    <a href="projects.html" class="btn btn-dark btn-lg">
+        <i class="bi bi-folder-fill"></i> More Projects
+    </a>
 </div>
 
 </section>
@@ -400,7 +470,59 @@ class="text-danger contact-icon">
 </div>
 
 </section>
+<!-- More Projects Modal -->
+<div class="modal fade" id="moreProjectsModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
 
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">My Other Projects</h5>
+        <button type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="list-group">
+
+          <a href="https://github.com/yourusername/voting-system"
+             target="_blank"
+             class="list-group-item list-group-item-action">
+             🗳 Online Voting System
+          </a>
+
+          <a href="https://github.com/yourusername/library-management"
+             target="_blank"
+             class="list-group-item list-group-item-action">
+             📚 Library Management System
+          </a>
+
+          <a href="https://github.com/yourusername/ecommerce"
+             target="_blank"
+             class="list-group-item list-group-item-action">
+             🛒 E-Commerce Website
+          </a>
+
+          <a href="file:///C:/Users/USER/Desktop/gptcproject/project5/index3.html"
+             target="_blank"
+             class="list-group-item list-group-item-action">
+             🎓 Student Management System
+          </a>
+
+          <a href="https://github.com/yourusername/portfolio"
+             target="_blank"
+             class="list-group-item list-group-item-action">
+             💼 Portfolio Website
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
 <!-- Footer -->
 <footer>
 
@@ -414,9 +536,199 @@ shifanasajeev13.github.io
 © 2026 Shifana Sajeev| All Rights Reserved.
 </p>
 
+
+
 </div>
 
 </footer>
+
+<!-- More Projects Modal -->
+<div class="modal fade" id="moreProjectsModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">My Additional Projects</h5>
+        <button type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="row g-3">
+
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h5>Student Management System</h5>
+                <p>Manage student records, attendance and reports.</p>
+                <a href="https://github.com/"
+                   target="_blank"
+                   class="btn btn-primary">
+                   View Project
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h5>Portfolio Website</h5>
+                <p>Responsive personal portfolio using Bootstrap.</p>
+                <a href="https://github.com/"
+                   target="_blank"
+                   class="btn btn-primary">
+                   View Project
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h5>Employee Management System</h5>
+                <p>Manage employee details and payroll records.</p>
+                <a href="https://github.com/"
+                   target="_blank"
+                   class="btn btn-primary">
+                   View Project
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h5>Hotel Booking Website</h5>
+                <p>Online room booking and reservation platform.</p>
+                <a href="https://github.com/"
+                   target="_blank"
+                   class="btn btn-primary">
+                   View Project
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Voting Modal -->
+<div class="modal fade" id="votingModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Online Voting System</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <img src="https://t3.ftcdn.net/jpg/03/89/61/88/360_F_389618887_PImTbyGB4vTQOoGKxjhOKp2w7hZmcNAs.jpg" style=height:500px
+             class="img-fluid rounded mb-3"
+             alt="Voting System">
+
+        <p>
+          A secure online voting application developed using
+          PHP, MySQL, Bootstrap and JavaScript.
+        </p>
+
+        <h6>Features</h6>
+        <ul>
+          <li>Admin Dashboard</li>
+          <li>Voter Login</li>
+          <li>Candidate Management</li>
+          <li>Vote Casting</li>
+          <li>Result Generation</li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Library Modal -->
+<div class="modal fade" id="libraryModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Library Management System</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <img src="https://4.imimg.com/data4/DB/QV/MY-29214035/library-management-system-500x500.jpg" style=height:500px
+             class="img-fluid rounded mb-3"
+             alt="Library Management">
+
+        <p>
+          Library management application for managing books,
+          students and issue records.
+        </p>
+
+        <h6>Features</h6>
+        <ul>
+          <li>Book Management</li>
+          <li>Student Management</li>
+          <li>Issue & Return Books</li>
+          <li>Search Books</li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Ecommerce Modal -->
+<div class="modal fade" id="ecommerceModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">E-Commerce Website</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <img src="https://img.magnific.com/free-photo/showing-cart-trolley-shopping-online-sign-graphic_53876-133967.jpg" style=height:500px
+             class="img-fluid rounded mb-3"
+             alt="Ecommerce Website">
+
+        <p>
+          Responsive online shopping website with product
+          listing and shopping cart functionality.
+        </p>
+
+        <h6>Features</h6>
+        <ul>
+          <li>Product Listing</li>
+          <li>Shopping Cart</li>
+          <li>User Login</li>
+          <li>Order Management</li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+</div> 
+
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
